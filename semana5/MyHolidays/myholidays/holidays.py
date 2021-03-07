@@ -1,7 +1,16 @@
-from datetime import date
+from datetime import date, datetime
 
 class MyCalendar:
-    def __init__(self, *args):
-        self.datas = []
-        self.datas.append(date(2021, 12, 5))
-        self.datas.append(date(2021, 4, 21))
+	def __init__(self, *args) -> None:
+		self.datas = []
+		self.add_holiday(*args)
+
+	def add_holiday(self, *args) -> None:
+		for data in args:
+			d = self.validate_data(data)
+			if d:
+				self.datas.append(d)
+		self.datas = list(set(self.datas))
+
+    def check_holiday(self, data) -> bool:
+		return self.validate_data(data) in self.datas
