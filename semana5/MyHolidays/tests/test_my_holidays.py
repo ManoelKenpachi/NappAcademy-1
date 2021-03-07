@@ -173,11 +173,11 @@ class TestMyCalendar:
         dt4 = '15/05'
         dt5 = '24/24/2021'
         objeto = MyCalendar(dt1, dt2)
-        #assert objeto.check_holiday(dt1) is True
-        #assert objeto.check_holiday(dt2) is True
-        #assert objeto.check_holiday(dt3) is False
-        #assert objeto.check_holiday(dt4) is False
-       # assert objeto.check_holiday(dt5) is False
+        assert objeto.check_holiday(dt1) is True
+        assert objeto.check_holiday(dt2) is True
+        assert objeto.check_holiday(dt3) is False
+        assert objeto.check_holiday(dt4) is False
+        assert objeto.check_holiday(dt5) is False
 
     def test_method_check_holiday_3(self):
         """
@@ -191,8 +191,8 @@ class TestMyCalendar:
         dt4 = '15/05'
         dt5 = '24/24/2021'
         objeto = MyCalendar(dt1, dt2)
-        #assert objeto.check_holiday(dt1) is False
-        #assert objeto.check_holiday(dt2) is False
-        #assert objeto.check_holiday(dt3) is False
-        #assert objeto.check_holiday(dt4) is False
-        #assert objeto.check_holiday(dt5) is False
+        assert objeto.check_holiday(dt1) is False
+        assert objeto.check_holiday(dt2) is False
+        assert objeto.check_holiday(dt3) is False
+        assert objeto.check_holiday(dt4) is False
+        assert objeto.check_holiday(dt5) is False
