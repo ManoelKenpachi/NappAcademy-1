@@ -7,11 +7,13 @@ class MyCalendar:
 
 	def add_holiday(self, *args):
 		for data in args:
-			d = self.validate_data(data)
-			if d:
-				self.datas.append(d)
+			add = self.validate_data(data)
+			if add:
+				self.datas.append(add)
 		self.datas = list(set(self.datas))
 
+	def check_holiday(self, data):
+		return self.validate_data(data) in self.datas
 
 	def validate_data(self, data):
 		if isinstance(data, date):
