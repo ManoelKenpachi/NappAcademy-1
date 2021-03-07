@@ -12,5 +12,14 @@ class MyCalendar:
 				self.datas.append(d)
 		self.datas = list(set(self.datas))
 
-    def check_holiday(self, data) -> bool:
+	def check_holiday(self, data) -> bool:
 		return self.validate_data(data) in self.datas
+
+	def validate_data(self, data) -> date:
+		if isinstance(data, date):
+			return data
+		elif isinstance(data, str):
+			try:
+				return datetime.strptime(data, '%d/%m/%Y').date()
+			except:
+				return None
