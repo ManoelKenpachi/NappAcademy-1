@@ -14,6 +14,8 @@ class MyCalendar:
         elif isinstance(data, str):
             try:
                 return datetime.strptime(data, '%d/%m/%Y').date()
+            except(ValueError, TypeError):
+                return None
 
     def add_holiday(self, *args):
         for data in args:
