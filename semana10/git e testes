@@ -1,0 +1,13 @@
+https://github.com/ManoelKenpachi/NappAcademy-1/tree/master/semana10
+
+Foquei os testes em nos campos de produto, data e valor.
+
+1- Alterei a primera data pro dia 99/03/2021.
+Seria necessário criar um validador de dadas com biblioteca datetime.
+
+2- Após o primeiro teste, coloquei em todos uma palavra. Foi naruto, uzumaki, hokage para respectivamente produto, valor e data.
+resultado: ValueError: could not convert string to float: 'uzumaki'
+O campo de valor precisa ser um número.
+
+3- Voltei apenas o valor para 100 e teste passou. A data precisaria de um validador, mas o produto seria necessário criar um catalogo e verificar se o produto existe nesse catalogo.
+
